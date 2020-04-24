@@ -28,6 +28,8 @@ h3{
 .wrap{
     max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .page-main{
@@ -41,6 +43,15 @@ h3{
 .page{
     padding-top: 161px;
     padding-bottom: 160px;
+    position: relative;
+    @media(max-width:1020px){
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @media(max-width:375px){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     &_grey{
         background-color: $bg-light-color;
     }
@@ -49,6 +60,9 @@ h3{
         text-align: center;
         margin-bottom: 25px;
         letter-spacing: 1.9px;
+        @media(max-width:375px){
+            line-height: 40px;
+        }
         
     
     }
@@ -75,6 +89,21 @@ h3{
         position: relative;
         box-shadow: 0 -2px #b2f1be inset;
     }
+    &__svg{
+        position: absolute;
+        top: -95px;
+        width: 100%;
+        z-index: -1;
+        min-height: 694px;
+        @media(max-width:1020px){
+            display: none;
+        }
+    }
+    &-carousel{
+        @media(max-width:1020px){
+            background-color: $bg-dark-color;
+        }
+    }
 }
 
 .header{
@@ -83,8 +112,10 @@ h3{
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 38px;
-    padding-bottom: 166px;
+    padding: 38px 15px 166px 15px;
+    @media(max-width:920px){
+        flex-direction: column;
+    }
     &__logo {
         display: block;
         width: 137px;
@@ -96,6 +127,11 @@ h3{
         display: flex;
         justify-content: flex-end;
         font-family: 'Open sans', serif;
+        @media(max-width:700px){
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
         &__item {
             margin-left: 22px;
             padding-bottom: 5px;
@@ -120,6 +156,16 @@ h3{
 .block-text {
     flex-basis: calc(93% - 500px);
     margin-left: 93px;
+    @media(max-width:1020px){
+      flex-basis:  calc(84% - 315px);
+    }
+    @media(max-width:700px){
+        margin: 0 auto;
+    }
+    @media(max-width:375px){
+        flex-basis: calc(100% - 40px);
+        margin-top: 50px;
+    }
     &__name {
         font-family: 'Open sans', serif,;
         font-size: 18px;
@@ -134,13 +180,16 @@ h3{
         font-size: 48px;
         font-weight: 700;
         letter-spacing: 1.8px;
-        margin-bottom: 32px;
+        margin-bottom: 38px;
+        line-height: 53px;
         span {
             display: block;
             color: #65e496;
             font-size: 18px;
-            margin-top: 21px;
+            margin-top: 11px;
             letter-spacing: 0.9px;
+            line-height: 23px;
+            margin-left: 3px;
         }
     }
     &__description {
@@ -149,6 +198,9 @@ h3{
         line-height: 25px;
         margin-bottom: 24px;
         letter-spacing: 0.75px;
+        @media(max-width:375px){
+            font-size: 11px;
+        }
     }
     &__btn {
         display: block;
@@ -164,6 +216,12 @@ h3{
         letter-spacing: 0.7px;
         margin-bottom: 19px;
         box-shadow: 0 -2px #59bb88 inset;
+        @media(max-width:700px){
+            margin: 0 auto;
+        }
+        @media(max-width:375px){
+            margin: 0 auto;
+        }
         &_light{
             display: block;
             background: linear-gradient(to top left, #65e49c, #65e4af);
@@ -178,6 +236,9 @@ h3{
             letter-spacing: 0.7px;
             margin-bottom: 19px;
             box-shadow: 0 -2px #b2f1be inset;
+            @media(max-width:375px){
+                margin: 0 auto;
+            }
         }
     }
     small{
@@ -195,6 +256,7 @@ h3{
         &__desc{
             font-size: 15px;
             font-family: 'Open Sans', sans-serif;
+            
         }
         &__btn{
             background: linear-gradient(to top left, #65e49c, #65e4af);
@@ -214,6 +276,11 @@ h3{
 .block-book{
     display: flex;
     justify-content: flex-start;
+    @media(max-width:700px){
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
     &-demo{
         display: block;
         width: 447px;
@@ -222,13 +289,22 @@ h3{
         background-repeat: no-repeat;
         flex-basis: 447px;
         position: relative;
+        @media(max-width:375px){
+            width: 375px;
+            height: 508px;
+        }
+        
         &__title{
             font-size: 36px;
             letter-spacing: 1px;
             text-transform: uppercase;
             position: absolute;
-            right: 135px;
+            right: 83px;
             top: 122px;
+            @media(max-width:375px){
+                right: 54px;
+                top: 122px;
+            }
             span{   
                 font-family:'Open Sans', serif;
                 font-size: 14px;
@@ -252,14 +328,26 @@ h3{
 .block-author{
     display: flex;
     justify-content: space-between;
+    @media(max-width:375px){
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
+    }
+    
 }
 
 .block-ava{
     position: relative;
+    @media(max-width:375px){
+        margin-top: 40px;
+    }
     &__svg{
         position: absolute;
         z-index: -1;
         right: 0;
+        @media(max-width:1020px){
+            width: 300px;
+            height: 412px;
+        }
     }
     &__svg--left{
         right: inherit;
@@ -268,6 +356,9 @@ h3{
     &__img{
         margin-top: 47px;
         margin-right: 44px;
+        @media(max-width:1020px){
+            width: 300px;
+        }
     }
     &__img--left{
         margin-top: 49px;
@@ -280,10 +371,16 @@ h3{
     display: flex;
     justify-content: space-around;
     margin-top: 152px;
+    @media(max-width:750px){
+        flex-direction: column;
+    }
     p{
         font-family: 'Open Sans', serif;
         text-align: center ;
         font-size: 18px;
+        @media(max-width:750px){
+            margin-bottom: 80px;
+        }
         span{
             font-family: 'Roboto Slab', serif;
             display: block;
@@ -298,13 +395,21 @@ h3{
     display: flex;
     justify-content: space-between;
     margin-top: 82px;
+    @media(max-width:1020px){
+        max-width:750px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
     h3{
         margin-bottom: 20px;
         letter-spacing: 1.2px;
     }
   
     &-text{
-        flex-basis: 41%;
+        flex-basis: calc(100% - 690px)    ;
+        @media(max-width:1020px) {
+            flex-basis: 100%;
+        }
         &__desc{
             font-family: 'Open Sans', serif;
             letter-spacing: 0.6px;
@@ -334,13 +439,21 @@ h3{
         }
     }
     &-table{
-        flex-basis: 49%;
+        flex-basis: 570px; 
+        @media(max-width:1020px){
+            flex-basis: 100%;
+            margin-top: 40px;
+        }
        
         &__list{
             margin: 0;
             padding: 0;
             counter-reset: list;
             column-count: 2 ;
+            column-gap: 19px;
+            @media(max-width:375px){
+                column-count: 1;
+            }
             &>li{
                 position: relative;
 
@@ -359,12 +472,28 @@ h3{
                     font-family: 'Open Sans', serif;
                     font-size: 15px;
                     line-height: 22px;
-                    top: 1px;
+                    top: calc(50% - 11px);
                     background-color: $accietn-color;
                     color: $light-color;
                     padding: 0px 7px;
                 }
             }
+            &_next{
+                counter-reset: list 10;
+                position: relative;
+                margin-top: 20px;
+                &::before{
+                    content: '';
+                    width: 100px;
+                    height: 2px;
+                    display: block;
+                    position: absolute;
+                    top: -15px;
+                    background-color: $accietn-color;
+                    
+                }
+            }
+            
         }
         &__btn{
             background: linear-gradient(to top left, #65e49c, #65e4af);
@@ -377,6 +506,9 @@ h3{
             border: none;
             margin-top: 35px;
             box-shadow: 0 -2px #b2f1be inset;
+            &:focus{
+                outline: none;
+            }
         }
     }
     
@@ -388,12 +520,24 @@ h3{
     padding: 0px 36px 0 46px;
     margin-top: 84px;
     position: relative;
+    @media(max-width:375px){
+        flex-wrap: wrap;
+        padding: 20px ;
+        margin: 0 auto;
+    }
     &-demo{
         display: inline-block;
         background-image: url(../img/book-mini.png);
         background-repeat: no-repeat;
         width: 290px;
         height: 431px;
+        @media(max-width:920px){
+            width: 165px;
+            height: 256px;
+            margin: 10px auto;
+
+        }
+        
        &__title{
            text-transform: uppercase;
            color: $light-color;
@@ -402,6 +546,10 @@ h3{
            padding-top: 48px;
             padding-left: 14px;
             letter-spacing: 0.8px;
+            @media(max-width:920px){
+                font-size: 16px;
+            }
+            
              &>span{
                display: block;
                color: $accietn-color;
@@ -418,11 +566,21 @@ h3{
              padding-top: 205px;
              font-size: 11px;
              letter-spacing: 1px;
+             @media(max-width:920px){
+                font-size: 8px;
+                padding-left: 43px;
+                padding-top: 65px;
+            }
          } 
        }
        &-text{
            display: flex;
            justify-content: space-around;
+           @media(max-width:375px){
+            flex-wrap: wrap;
+            padding: 20px ;
+            margin: 0 auto;
+        }
            &-block{
            
                 display: inline-block;
@@ -453,16 +611,25 @@ h3{
         display: flex;
         justify-content: space-evenly;
         margin-top: 85px;
+        @media(max-width:900px){
+            flex-direction: column;
+            max-width: 550px;
+            margin: 85px auto 0;
+        }
         h4{
             font-size: 18px;
             margin-top: 15px;
             letter-spacing: 0.9px;
         }
         &-item{
-            margin: 0 16px 0 16px;
+            margin: 0 16px 0 16px; 
+            flex-basis: 100%;
+            @media(max-width:900px){
+                margin-bottom: 40px;
+            }
         }
         &-img  {
-            width: 369px;
+            width: 100%;
             height: 224px;
             overflow: hidden;
             position: relative;
@@ -489,6 +656,7 @@ h3{
         }
         &-info{
             font-size: 15px;
+            flex-wrap: wrap;
             a{
                 color: $accietn-color;
                 text-decoration: none;
@@ -503,7 +671,14 @@ h3{
 .block-letter{
     display: flex;
     justify-content: space-between;
+        @media(max-width:375px){
+            flex-wrap: wrap;
+        }
     &__title{
+        @media(max-width:700px){
+            margin-top: 0px;
+            line-height: 46px;
+        }
         font-size: 48px;
         
         margin-bottom: 23px;
@@ -514,6 +689,12 @@ h3{
     }
     &-item{
         flex-basis: 49%;
+        @media(max-width:700px){
+            align-self: flex-end;
+        }
+        @media(max-width:375px){
+            flex-basis: 100%;
+        }
     }
     &__input{
         width: 100%;
@@ -524,6 +705,7 @@ h3{
         box-sizing: border-box;
         border-radius: 3px;
         letter-spacing: 0.6px;
+        
         &:focus{
             outline: none;
         }
@@ -533,6 +715,10 @@ h3{
         font-family: 'Open sans', serif;
         font-size: 15px;
         letter-spacing: 0.75px;
+        @media(max-width:700px){
+            line-height: 22px;
+            font-size: 12px;
+        }
     }
     &__btn{
         background: linear-gradient(to top left, #65e49c, #65e4af);
@@ -559,6 +745,9 @@ h3{
 .block-footer{
     display: flex;
     justify-content: space-between;
+    @media(max-width:375px){
+        display: block;
+    }
     &>div{
         flex-basis: 30%;
     }
@@ -576,6 +765,9 @@ h3{
     &__list{
         list-style-type: none;
         padding-left: 0;
+        @media(max-width:375px){
+            font-size: 10px;
+        }
     }
     &__social{
         display: flex;
@@ -586,6 +778,91 @@ h3{
             &>a{
                 color: $accietn-color;
             }
+        }
+    }
+}
+.block-carousel{
+    text-align: center;
+    h3{
+        color: $accietn-color;
+        margin-bottom: 4px;
+    }
+    &__desc{
+        color: $grey-color;
+        font-family: 'Open sans', serif;
+        max-width: 760px;
+        margin: 0 auto 35px;
+        line-height: 27px;
+    }
+    &-thumb{
+        display: block;
+        margin: 0 auto 0;
+        position: relative;
+        overflow: hidden;
+        width: 167px;
+        height: 167px;
+        border-radius: 100%;
+        img{
+            width: 167px;
+            height: 167px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+        }
+    }
+    &__expert{
+    
+    margin-bottom: 35px;
+    
+    }
+    &-ava{
+        position: relative;
+        width: 167px;
+        height: 167px;
+        display: block;
+        margin: 0 auto;
+    }
+    &-bq{
+        position: absolute;
+        display: block;
+        background-image:url(../img/bq.png);
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 42px;
+        top: 0;
+        right: 0;
+    }
+
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    &>li{
+        margin: 0 5px;
+        
+        &>button{
+            text-indent: -9999px;
+            width: 8px;
+            height:8px;
+            border: none;
+            background-color: $accietn-color;
+            border-radius: 100%;
+            line-height: 0;
+            font-size: 0;
+            cursor: pointer;
+            padding:5px;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    &>li.slick-active{
+        &>button{
+            width: 37px;
+            border-radius: 10px;
         }
     }
 }

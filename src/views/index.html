@@ -131,7 +131,19 @@
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Lorem ipsum dolor sit amet</li>
                         </ol>
-                        <button class="block-about-table__btn">More</button>
+                        <ol class="block-about-table__list block-about-table__list_next" id="nextContentList" style="display: none;">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ol>
+                        <button id="nextContent" class="block-about-table__btn">More</button>
                     </div>
                 </div>
             </div>
@@ -222,26 +234,40 @@
                 <a class="page__btn" href="">Brouse all books</a>
             </div>
         </div>
-        <div class="page">
+        <div class="page page-carousel">
             <div class="wrap">
                 <div class="block-carousel">
                     <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/customer.jpg" alt="">
+                            </div>
+                            <span class="block-carousel-bq"></span>
+                        </div>
+                        
                         <h3>Kate Dennings</h3>
-                        <p>Calligraphy Expert</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                     <div>
+                        <div class="block-carousel-thumb">
+                            <img src="../img/customer.jpg" alt="">
+                        </div>
                         <h3>Kate Dennings</h3>
-                        <p>Calligraphy Expert</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                     <div>
+                        <div class="block-carousel-thumb">
+                            <img src="../img/customer.jpg" alt="">
+                        </div>
                         <h3>Kate Dennings</h3>
-                        <p>Calligraphy Expert</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                 </div>
             </div>
+            <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M0 0l802 61 799-61v789l-799 60L0 789V0z" fill="#44444f" fill-rule="evenodd"/></svg>
         </div>
         <div class="page">
             <div class="wrap">
@@ -416,6 +442,10 @@
                 arrows:false,
             });
             });
+            $("#nextContent").click(function(){
+                $("#nextContentList").fadeIn();
+                $("#nextContent").hide();
+                });
         </script>
     </body>
 </html>
